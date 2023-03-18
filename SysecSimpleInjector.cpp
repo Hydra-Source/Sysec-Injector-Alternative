@@ -121,7 +121,7 @@ int main()
 {
     LPCTSTR url = L"Active Link Here";
     LPCTSTR dllPath = L"C:\\Temp\\Sysec.dll";
-    LPCTSTR targetProcess = L"GTA5.exe";
+    LPCTSTR targetProcess = L"To Inject Here.exe";
 
     SetConsoleTitleA("Sysec-Injector");
     
