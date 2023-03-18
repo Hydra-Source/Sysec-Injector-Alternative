@@ -119,7 +119,7 @@ DWORD getProcessIdByName(const wchar_t* processName)
 
 int main()
 {
-    LPCTSTR url = L"https://cdn.discordapp.com/attachments/1047594171734695976/1086628989893869568/Sysec.dll";
+    LPCTSTR url = L"Active Link Here";
     LPCTSTR dllPath = L"C:\\Temp\\Sysec.dll";
     LPCTSTR targetProcess = L"GTA5.exe";
 
